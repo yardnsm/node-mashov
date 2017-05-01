@@ -2,7 +2,7 @@
 
 [![Build Status](https://travis-ci.org/yardnsm/node-mashov.svg?branch=master)](https://travis-ci.org/yardnsm/node-mashov)
 
-> An node.js wrapper for [Mashov](http://www.mashov.info/) API.
+> A node.js wrapper for [Mashov](http://www.mashov.info/) API.
 
 For a full list of features, consult the [API](#api) section.
 
