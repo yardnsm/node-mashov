@@ -1,0 +1,12 @@
+{
+  "plain": [
+    { "semel": 1000, "name": "s1", "years": [2017] },
+    { "semel": 1001, "name": "s2", "years": [2015, 2017] },
+    { "semel": 1002, "name": "s3", "years": [2028] }
+  ],
+  "parsed": [
+    { "id": 1000, "name": "s1", "years": [2017] },
+    { "id": 1001, "name": "s2", "years": [2015, 2017] },
+    { "id": 1002, "name": "s3", "years": [2028] }
+  ]
+}

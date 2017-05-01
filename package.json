@@ -1,0 +1,56 @@
+{
+  "name": "node-mashov",
+  "version": "0.0.1",
+  "description": "A wrapper for Mashov API",
+  "keywords": [
+    "mashov",
+    "api",
+    "wrapper",
+    "school"
+  ],
+  "license": "MIT",
+  "author": {
+    "name": "Yarden Sod-Moriah",
+    "email": "yardnsm@gmail.com",
+    "url": "yardnsm.net"
+  },
+  "files": [
+    "dist"
+  ],
+  "main": "dist/index.js",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/yardnsm/node-mashov"
+  },
+  "scripts": {
+    "build": "babel ./lib --out-dir ./dist",
+    "test": "jest --coverage",
+    "lint": "eslint . --ignore-path .gitignore",
+    "clean": "rm -rf ./dist",
+    "prepublish": "npm test && npm run build"
+  },
+  "dependencies": {
+    "axios": "^0.16.1",
+    "babel-jest": "^19.0.0"
+  },
+  "devDependencies": {
+    "babel-cli": "^6.24.1",
+    "babel-env": "^2.4.0",
+    "babel-eslint": "^7.2.3",
+    "eslint": "^3.19.0",
+    "eslint-config-airbnb-base": "^11.1.3",
+    "eslint-plugin-import": "^2.2.0",
+    "jest": "^19.0.2",
+    "moxios": "^0.4.0"
+  },
+  "engines": {
+    "node": ">=4"
+  },
+  "jest": {
+    "testMatch": [
+      "**/test/**/*.js?(x)",
+      "**/?(*.)(spec|test).js?(x)"
+    ],
+    "verbose": true
+  }
+}
