@@ -5,6 +5,7 @@
 > A node.js wrapper for [Mashov](http://www.mashov.info/) API.
 
 For a full list of features, consult the [API](#api) section.
+This wrapper DOES NOT include support for parental accounts in Mashov.
 
 ## Install
 
@@ -23,8 +24,9 @@ const schools = await fetchSchools();
 const school = schools.find(s => s.name.includes('myschool'));
   
 const client = new Client({
-  username: '123456789',
-  password: 'shhhhhh',
+  username: 'username',
+  password: 'supersecret',
+  year: school.years[school.years.length - 1],
   school
 });
 
@@ -46,26 +48,23 @@ Returns a `Promise` for an `Array` of schools.
 Create a new client instance.
 
 ```javascript
-new Client(options);
+new Client(userDetails);
 ```
 
-##### options
+##### userDetails
 
 Type: `Object`
 
 ###### username
 ###### password
+###### year
 ###### school
-
-The user's school, see [`fetchSchools`](#fetchschools).
 
 #### Client#login()
 
-Returns: `Promise`
+Returns a `Promise`.
 
-Authenticate the user.
-
-> The following methods are available only after a successful login
+> The following methods will become available only after a successful login
 
 #### Client#getUser()
 #### Client#getGrades()
