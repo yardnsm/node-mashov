@@ -28,5 +28,13 @@
       "lastPassSet": "2017-02-26T17:37:51+02:00",
       "displayName": "John Doe 11th(2)"
     }
+  },
+  "headers": {
+    "x-csrf-token": "000000",
+    "set-cookie": [
+      "MashovSessionID=0000; secure",
+      "uniquId=0000; secure",
+      "Csrf-Token=0000; secure"
+    ]
   }
 }
