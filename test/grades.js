@@ -1,7 +1,7 @@
 import axios from 'axios';
 import moxios from 'moxios';
 import { endpoints } from '../lib/api-config';
-import gradesController from '../lib/client/grades';
+import gradesController from '../lib/controllers/grades';
 import gradesFixture from './fixtures/grades.json';
 
 beforeEach(() => {

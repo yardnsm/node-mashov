@@ -1,7 +1,7 @@
 import axios from 'axios';
 import moxios from 'moxios';
 import { endpoints } from '../lib/api-config';
-import loginController from '../lib/client/login';
+import loginController from '../lib/controllers/login';
 import loginFixture from './fixtures/login.json';
 
 beforeEach(() => {
