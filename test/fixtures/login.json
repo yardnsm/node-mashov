@@ -1,36 +1,24 @@
 {
   "plain": {
-    "sessionId": "00000000-0000-0000-0000-000000000000",
+    "sessionId": "0000",
     "credential": {
-      "sessionId": "00000000-0000-0000-0000-000000000000",
-      "userId": "00000000-0000-0000-0000-0000000000",
+      "sessionId": "0000",
+      "userId": "0000",
       "idNumber": 123456789,
       "userType": 0,
       "schoolUserType": 1,
       "hasAuthenticated": true,
       "semel": 1000,
       "year": 2017,
-      "correlationId": "00000000-0000-0000-0000-0000000000"
+      "correlationId": "0000"
     },
     "accessToken": {
-      "schoolOptions": {
-        "schoolName": "school1"
-      },
-      "permissions": {
-        "isPrincipal": false,
-        "isAdmin": false,
-        "isTeacher": false,
-        "isEducator": false,
-        "isGuide": false
-      },
       "username": null,
-      "lastLogin": "2017-05-01T12:46:57+03:00",
-      "lastPassSet": "2017-02-26T17:37:51+02:00",
       "displayName": "John Doe 11th(2)"
     }
   },
   "headers": {
-    "x-csrf-token": "000000",
+    "x-csrf-token": "0000",
     "set-cookie": [
       "MashovSessionID=0000; secure",
       "uniquId=0000; secure",

@@ -1,7 +1,7 @@
 import moxios from 'moxios';
 import { endpoints } from '../lib/api-config';
 import fetchSchools from '../lib/fetch-schools';
-import schoolsFixture from './fixtures/schools'
+import schoolsFixture from './fixtures/schools.json';
 
 beforeEach(() => {
   moxios.install();
@@ -11,7 +11,7 @@ afterEach(() => {
   moxios.uninstall();
 });
 
-test('fetchSchools should fetch a list of all schools', async () => {
+test('should fetch a list of all schools', async () => {
   moxios.stubRequest(endpoints.schools, {
     status: 200,
     response: schoolsFixture.plain

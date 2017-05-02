@@ -1,0 +1,20 @@
+{
+  "plain": [{
+    "teacherName": "Teacher1",
+    "groupId": 100000,
+    "subjectName":"sn1",
+    "eventDate": "0000-00-00T00:00:00",
+    "gradingEvent": "first exam",
+    "gradeType": "exam",
+    "grade": 100
+  }],
+  "parsed": [{
+    "teacher": "Teacher1",
+    "groupId": 100000,
+    "subject": "sn1",
+    "date": "0000-00-00T00:00:00",
+    "type": "exam",
+    "event": "first exam",
+    "grade": 100
+  }]
+}
