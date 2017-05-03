@@ -92,7 +92,7 @@ Default: `'all'`
 ###### sender
 ###### receiver
 ###### subject
-###### content
+###### body
 
 Type: `string`
 
