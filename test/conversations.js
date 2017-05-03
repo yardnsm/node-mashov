@@ -13,7 +13,7 @@ afterEach(() => {
 });
 
 test('get all conversations', (done) => {
-  moxios.stubRequest(endpoints.conversations.inbox('?limit=20&skip=0'), {
+  moxios.stubRequest(endpoints.conversations.inbox('?&'), {
     status: 200,
     response: fixture.all_conversations
   });
