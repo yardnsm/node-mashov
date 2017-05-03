@@ -4,8 +4,11 @@
 
 > A node.js wrapper for [Mashov](http://www.mashov.info/) API.
 
+Note that:
+- This wrapper focuses on student accounts, so don't expect for parental/teachers accounts support.
+- I was afraid to test messages sending, so there isn't such feature here.
+
 For a full list of features, consult the [API](#api) section.
-This wrapper DOES NOT include support for parental accounts in Mashov.
 
 ## Install
 
@@ -43,13 +46,9 @@ client.login()
 
 Returns a `Promise` for an `Array` of schools.
 
-#### new Client()
+#### new Client(userDetails)
 
 Create a new client instance.
-
-```javascript
-new Client(userDetails);
-```
 
 ##### userDetails
 
@@ -64,16 +63,99 @@ Type: `Object`
 
 Returns a `Promise`.
 
-> The following methods will become available only after a successful login
+#### Client#getAllConversations([query], [limit], [skip])
 
-#### Client#getUser()
+Getting the user's conversations.
+
+##### query
+
+Type: `Object`, `string`<br>
+Default: `'inbox'`
+
+If string, it'll fetch all of the messages matched the type. It could be in of the following:
+- `'inbox'` - Inbox
+- `'archive'` - Archived messages
+- `'unread'` - Unread messages
+- `'deleted'` - Deleted messages
+- `'sent'` - Messages sent
+- `'draft'` - Drafts
+
+###### in
+
+Type: `string`<br>
+Default: `'all'`
+
+- `'all'` - All conversations
+- `'inbox'` - Inbox
+- `'unread'` - Unread messages
+
+###### sender
+###### receiver
+###### subject
+###### content
+
+Type: `string`
+
+###### attachment
+
+Type: `boolean`<br>
+Default: `false`
+
+###### fromDate
+###### toDate
+
+Type: `string`<br>
+Format: `YYYY-MM-DD`
+
+An example for query:
+
+```javascript
+{
+  in: 'unread',
+  sender: 'teacher',
+  receiver:  'student',
+  subject: 'Bring your books tomorrow',
+  attachment: true,
+  dromDate: '2017-05-01'
+}
+```
+
+##### limit
+
+Type: `number`<br>
+Default: `20`
+
+Number of messages to fetch (from start).
+
+##### skip
+
+Type: `number`<br>
+Default: `0`
+
+Number of messages to skip. Can be useful for pagination.
+
+#### Client#getSingleConversation(conversationId)
+
+Get a single conversation.
+
+> Example usage:
+> ```javascript
+> client.getAllConversations()
+>   .then(convs => convs[0].id)
+>   .then(client.getSingleConversation)
+>   .then((conv) => {
+>     console.log(conv);
+>   });
+> ```
+
 #### Client#getGrades()
 #### Client#getBagrutGrades()
+
+#### Client#getUser()
 #### Client#getBehaveEvents()
 #### Client#getGroups()
 #### Client#getTimetable()
 #### Client#getContacts()
-#### Client#getInbox()
 
 ---
 

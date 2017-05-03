@@ -1,0 +1,92 @@
+{
+  "all_conversations": [{
+    "conversationId": "0000",
+    "subject": "Subject",
+    "sendTime": "2017-05-01T19:07:11",
+    "isNew": true,
+    "hasDrafts": false,
+    "hasAttachments": true,
+    "messages": [{  
+      "messageId": "1111",
+      "conversationId": "0000",
+      "senderId": "2222",
+      "senderName": "Teacher1",
+      "subject": "Subject",
+      "lastUpdate": "2017-05-01T19:07:10",
+      "sendTime": "2017-05-01T19:07:11"
+    }],
+    "labels": []
+  }],
+
+  "all_conversations_parsed": [{
+    "id": "0000",
+    "subject": "Subject",
+    "unread": true,
+    "hasAttachments": true,
+    "messages": [{
+      "id": "1111",
+      "sender": "Teacher1",
+      "subject": "Subject",
+      "timestamp": "2017-05-01T19:07:11"
+    }]
+  }],
+
+  "single_conversation": {  
+    "conversationId": "0000",
+    "subject": "Subject",
+    "sendTime": "2017-05-01T19:07:11",
+    "isNew": true,
+    "hasDrafts": false,
+    "hasAttachments": true,
+    "messages":[{  
+      "messageId": "1111",
+      "conversationId": "0000",
+      "senderId": "2222",
+      "senderName": "Teacher1",
+      "subject": "Subject",
+      "body": "<p>Hello!</p>",
+      "lastUpdate": "2017-05-01T19:07:10",
+      "sendTime": "2017-05-01T19:07:11",
+      "recipients":[{  
+        "comment": null,
+        "displayOrder": 4,
+        "cssClass": "mshv-contact mshv-contact-teacher",
+        "value": "y",
+        "valueType": "ClassCode",
+        "targetType": "Educators",
+        "displayName": "All teachers",
+        "isGroup": true
+      }],
+      "cc": null,
+      "bcc": null,
+      "folder": 2,
+      "isNew": true,
+      "isDeleted": false,
+      "files": [
+        { "fileId": "0000", "fileName": "File1.docx" }
+      ],
+      "labels":[],
+      "smsDetails":null
+    }],
+    "labels":[]
+  },
+
+  "single_conversation_parsed": {
+    "id": "0000",
+    "subject": "Subject",
+    "unread": true,
+    "hasAttachments": true,
+    "messages": [{
+      "id": "1111",
+      "sender": "Teacher1",
+      "subject": "Subject",
+      "body": "<p>Hello!</p>",
+      "timestamp": "2017-05-01T19:07:11",
+      "unread": true,
+      "deleted": false,
+      "attachments": [
+        { "id": "0000", "name": "File1.docx" }
+      ]
+    }]
+  }
+}

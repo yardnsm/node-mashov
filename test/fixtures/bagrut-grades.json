@@ -1,0 +1,18 @@
+{
+  "plain": [{
+    "studentGuid":"0000",
+    "moed": 201706,
+    "semel": 1001,
+    "name": "Computer Science",
+    "shnaty": 100,
+    "test": 100,
+    "final": 100
+  }],
+  "parsed": [{
+    "id": 1001,
+    "name": "Computer Science",
+    "yearly": 100,
+    "test": 100,
+    "final": 100
+  }]
+}
