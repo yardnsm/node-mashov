@@ -42,6 +42,8 @@ client.login()
 
 ### API
 
+> Sample reponses from the API can be found [here](test/fixtures).
+
 #### fetchSchools()
 
 Returns a `Promise` for an `Array` of schools.
@@ -72,7 +74,10 @@ Getting the user's conversations.
 Type: `Object`, `string`<br>
 Default: `'inbox'`
 
-If string, it'll fetch all of the messages matched the type. It could be in of the following:
+Mashov's API lets you query conversations in a... weird way. This wrapper
+includes support for that.
+
+If `query` is a string, it'll fetch all of the messages matched the type. It could be one of the following:
 - `'inbox'` - Inbox
 - `'archive'` - Archived messages
 - `'unread'` - Unread messages
@@ -107,18 +112,17 @@ Default: `false`
 Type: `string`<br>
 Format: `YYYY-MM-DD`
 
-An example for query:
-
-```javascript
-{
-  in: 'unread',
-  sender: 'teacher',
-  receiver:  'student',
-  subject: 'Bring your books tomorrow',
-  attachment: true,
-  dromDate: '2017-05-01'
-}
-```
+> An example for a valid query:
+> ```javascript
+> {
+>   in: 'unread',
+>   sender: 'teacher',
+>   receiver:  'student',
+>   subject: 'Bring your books tomorrow',
+>   attachment: true,
+>   dromDate: '2017-05-01'
+> }
+> ```
 
 ##### limit
 
