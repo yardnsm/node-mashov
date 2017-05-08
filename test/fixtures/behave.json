@@ -1,0 +1,31 @@
+{
+  "plain": [{
+    "achvaAval": 0,
+    "achvaCode": 62,
+    "achvaName": "absense",
+    "groupId": 1000,
+    "justification": "approved",
+    "justificationId": 1,
+    "lesson": 2,
+    "lessonId": 1111,
+    "lessonDate":"2016-09-05T00:00:00",
+    "lessonReporter": "0000",
+    "lessonType": 1,
+    "remark": null,
+    "reporter": "Teacher1",
+    "reporterGuid": "0000",
+    "studentGuid": "2222",
+    "subject": "Subject1",
+    "timestamp": "2017-02-26T11:04:17+02:00"
+  }],
+  "parsed": [{
+    "groupId": 1000,
+    "lesson": 2,
+    "date": "2016-09-05T00:00:00",
+    "type": "absense",
+    "justification": "approved",
+    "justificationId": 1,
+    "reporter": "Teacher1",
+    "subject": "Subject1"
+  }]
+}

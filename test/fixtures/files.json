@@ -1,0 +1,13 @@
+{
+  "plain": [{
+    "fileId": 10,
+    "fileName": "File.txt",
+    "ownerGroup": "Group1"
+  }],
+  "parsed": [{
+    "id": 10,
+    "name": "File.txt",
+    "groupName": "Group1",
+    "url": "https://svc.mashov.info/api/students/0000/files/10/File.txt"
+  }]
+}

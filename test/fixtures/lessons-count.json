@@ -1,0 +1,13 @@
+{
+  "plain": [{
+    "groupId": 1000,
+    "lessonCount": 10,
+    "studentGuid": "0000",
+    "weeklyHours": 6
+  }],
+  "parsed": [{
+    "groupId": 1000,
+    "lessonCount": 10,
+    "weeklyHours": 6
+  }]
+}

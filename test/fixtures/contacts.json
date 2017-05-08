@@ -1,0 +1,25 @@
+{
+  "plain": [{
+    "studentGuid": "0000",
+    "familyName": "Doe",
+    "privateName": "John",
+    "classCode": "11th",
+    "classNum": 2,
+    "city": "Gotham",
+    "address": "Street",
+    "phone": "080000000",
+    "email": "hello@example.com",
+    "cellphone": "0500000000"
+  }],
+  "parsed": [{
+    "firstName": "John",
+    "lastName": "Doe",
+    "classCode": "11th",
+    "classNumber": 2,
+    "city": "Gotham",
+    "address": "Street",
+    "email": "hello@example.com",
+    "phone": "080000000",
+    "cellphone": "0500000000"
+  }]
+}

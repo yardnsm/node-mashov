@@ -1,12 +1,15 @@
-# node-mashov [WIP]
+# node-mashov
 
 [![Build Status](https://travis-ci.org/yardnsm/node-mashov.svg?branch=master)](https://travis-ci.org/yardnsm/node-mashov)
+[![Stability](https://img.shields.io/badge/stability-experimental-orange.svg)]()
 
 > A node.js wrapper for [Mashov](http://www.mashov.info/) API.
 
 Note that:
-- This wrapper focuses on student accounts, so don't expect for parental/teachers accounts support.
-- I was afraid to test messages sending, so there isn't such feature here.
+
+- This wrapper focuses on student accounts, so don't expect for parental/teacher accounts support.
+- I was too scared to test messages sending, so there isn't such feature here.
+- I am not affiliated with Mashov in any way.
 
 For a full list of features, consult the [API](#api) section.
 
@@ -25,7 +28,7 @@ import { fetchSchools, Client } from 'node-mashov';
 
 const schools = await fetchSchools();
 const school = schools.find(s => s.name.includes('myschool'));
-  
+
 const client = new Client({
   username: 'username',
   password: 'supersecret',
@@ -61,11 +64,17 @@ Type: `Object`
 ###### year
 ###### school
 
+**All of the following methods return a `Promise`**
+
 #### Client#login()
 
-Returns a `Promise`.
+Authenticate using the details provided in the constructor.
 
-#### Client#getAllConversations([query], [limit], [skip])
+#### Client#logout()
+
+Deauthenticate and destroy authentication details.
+
+#### Client#getConversations([query], [limit], [skip])
 
 Getting the user's conversations.
 
@@ -74,16 +83,19 @@ Getting the user's conversations.
 Type: `Object`, `string`<br>
 Default: `'inbox'`
 
-Mashov's API lets you query conversations in a... weird way. This wrapper
-includes support for that.
+Mashov's API lets you query conversations. This wrapper does include support for that.
 
-If `query` is a string, it'll fetch all of the messages matched the type. It could be one of the following:
+If `query` is a `string`, it'll fetch all of the messages matched the type. It could be one of the following:
+
 - `'inbox'` - Inbox
 - `'archive'` - Archived messages
 - `'unread'` - Unread messages
 - `'deleted'` - Deleted messages
 - `'sent'` - Messages sent
 - `'draft'` - Drafts
+
+Otherwise, you can use a more complex query by making `query` into an object,
+with the following properties:
 
 ###### in
 
@@ -106,18 +118,21 @@ Type: `string`
 Type: `boolean`<br>
 Default: `false`
 
+If `true`, will query all the conversations that has an attachment. If `false`, it'll query
+conversations with or without attachments.
+
 ###### fromDate
 ###### toDate
 
 Type: `string`<br>
 Format: `YYYY-MM-DD`
 
-> An example for a valid query:
+> **An example for a valid query:**
 > ```javascript
 > {
 >   in: 'unread',
 >   sender: 'teacher',
->   receiver:  'student',
+>   receiver: 'student',
 >   subject: 'Bring your books tomorrow',
 >   attachment: true,
 >   dromDate: '2017-05-01'
@@ -138,11 +153,11 @@ Default: `0`
 
 Number of messages to skip. Can be useful for pagination.
 
-#### Client#getSingleConversation(conversationId)
+#### Client#getConversation(conversationId)
 
-Get a single conversation.
+Fetch a single conversation.
 
-> Example usage:
+> **Example usage:**
 > ```javascript
 > client.getAllConversations()
 >   .then(convs => convs[0].id)
@@ -154,12 +169,33 @@ Get a single conversation.
 
 #### Client#getGrades()
 #### Client#getBagrutGrades()
-
-#### Client#getUser()
 #### Client#getBehaveEvents()
-#### Client#getGroups()
+#### Client#getLessonsCount()
+
+#### Client#getBells()
+
+Will fetch the user's school's bell schedule.
+
 #### Client#getTimetable()
+
+#### Client#getFiles()
+
+Will fetch the user's files (aka study meterials)
+
+#### Client#getGroups()
 #### Client#getContacts()
+
+#### Client#getGroupsContacts()
+
+> **Example usage:**
+> ```javascript
+> client.getGroups()
+>   .then(groups => groups[0].id)
+>   .then(client.getGroupsContacts)
+>   .then((contacts) => {
+>     console.log(contacts);
+>   });
+> ```
 
 ---
 

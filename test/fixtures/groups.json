@@ -1,0 +1,16 @@
+{
+  "plain": [{
+    "fullSubjectName": "FullSubject1",
+    "groupId": 1000,
+    "groupName": "Group1",
+    "subjectName": "Subject1",
+    "teacherGuid": "0000",
+    "teacherName": "Teacher1"
+  }],
+  "parsed": [{
+    "id": 1000,
+    "name": "Group1",
+    "subject": "Subject1",
+    "teacher": "Teacher1"
+  }]
+}

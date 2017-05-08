@@ -1,0 +1,12 @@
+{
+  "plain": [{
+    "lessonNumber": 1,
+    "startTime": "08:15:00",
+    "endTime": "09:00:00"
+  }],
+  "parsed": [{
+    "lesson": 1,
+    "startTime": "08:15:00",
+    "endTime": "09:00:00"
+  }]
+}
