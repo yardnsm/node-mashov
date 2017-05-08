@@ -161,7 +161,7 @@ Fetch a single conversation.
 > ```javascript
 > client.getAllConversations()
 >   .then(convs => convs[0].id)
->   .then(client.getSingleConversation)
+>   .then(client.getConversation)
 >   .then((conv) => {
 >     console.log(conv);
 >   });
@@ -191,7 +191,7 @@ Will fetch the user's files (aka study meterials)
 > ```javascript
 > client.getGroups()
 >   .then(groups => groups[0].id)
->   .then(client.getGroupsContacts)
+>   .then(client.getGroupsContact)
 >   .then((contacts) => {
 >     console.log(contacts);
 >   });
