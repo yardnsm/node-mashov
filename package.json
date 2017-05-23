@@ -24,7 +24,7 @@
   },
   "scripts": {
     "build": "babel ./lib --out-dir ./dist",
-    "test": "jest --coverage",
+    "test": "jest --config .jestrc",
     "lint": "eslint . --ignore-path .gitignore",
     "clean": "rm -rf ./dist",
     "prepublish": "npm test && npm run build"
@@ -46,12 +46,5 @@
   },
   "engines": {
     "node": ">=4"
-  },
-  "jest": {
-    "testMatch": [
-      "**/test/**/*.js?(x)",
-      "**/?(*.)(spec|test).js?(x)"
-    ],
-    "verbose": true
   }
 }
