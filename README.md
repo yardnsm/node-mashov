@@ -29,14 +29,14 @@ import { fetchSchools, Client } from 'node-mashov';
 const schools = await fetchSchools();
 const school = schools.find(s => s.name.includes('myschool'));
 
-const client = new Client({
+const client = new Client();
+
+client.login({
   username: 'username',
   password: 'supersecret',
   year: school.years[school.years.length - 1],
   school
-});
-
-client.login()
+})
   .then(client.getGrades)
   .then((grades) => {
     console.log(grades);
@@ -63,6 +63,12 @@ Type: `Object`
 ###### password
 ###### year
 ###### school
+
+#### Client#getAuthDetails()
+#### Client#setAuthDetails(authDetails)
+
+After a successful login, an `authDetails` object is created, containing the required information
+for the client to "talk" with the API. You should store those details for future use.
 
 **All of the following methods return a `Promise`**
 
