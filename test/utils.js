@@ -14,6 +14,7 @@ test('createCookieHeader', () => {
   const cookies = [
     { name: 'cookie1', value: 'val1' },
     { name: 'cookie2', value: 'val2' },
+    { name: 'cookie3', value: null },
   ];
 
   const res = createCookieHeader(cookies);
@@ -25,9 +26,10 @@ test('createQueryString', () => {
   const parts = [
     { name: 'par1', value: 'val1' },
     { name: 'par2', value: 'val2' },
+    { name: 'par3', value: null },
   ];
 
   const res = createQueryString(parts);
 
-  expect(res).toEqual('?par1=val1&par2=val2');
+  expect(res).toEqual('par1=val1&par2=val2');
 });

@@ -36,8 +36,7 @@ client.login({
   password: 'supersecret',
   year: school.years[school.years.length - 1],
   school
-})
-  .then(client.getGrades)
+}).then(client.getGrades)
   .then((grades) => {
     console.log(grades);
   });
@@ -68,7 +67,21 @@ Type: `Object`
 #### Client#setAuthDetails(authDetails)
 
 After a successful login, an `authDetails` object is created, containing the required information
-for the client to "talk" with the API. You should store those details for future use.
+for the client to authenticate with the API. You should store those details for future use.
+
+##### authDetails
+
+Type: `Object`
+
+#### Client#setStartDate(startDate)
+#### Client#setEndDate(endDate)
+
+The API lets you specify time range for records. Those methods allows you to utilize this feture.
+
+##### startDate, endDate
+
+Type: `string`, `null`<br>
+Format: `YYYY-MM-DD`
 
 **All of the following methods return a `Promise`**
 
