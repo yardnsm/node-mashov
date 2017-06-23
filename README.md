@@ -50,18 +50,9 @@ client.login({
 
 Returns a `Promise` for an `Array` of schools.
 
-#### new Client(userDetails)
+#### new Client()
 
 Create a new client instance.
-
-##### userDetails
-
-Type: `Object`
-
-###### username
-###### password
-###### year
-###### school
 
 #### Client#getAuthDetails()
 #### Client#setAuthDetails(authDetails)
@@ -85,9 +76,18 @@ Format: `YYYY-MM-DD`
 
 **All of the following methods return a `Promise`**
 
-#### Client#login()
+#### Client#login(userDetails)
 
 Authenticate using the details provided in the constructor.
+
+##### userDetails
+
+Type: `Object`
+
+###### username
+###### password
+###### year
+###### school
 
 #### Client#logout()
 
