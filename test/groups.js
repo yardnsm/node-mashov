@@ -15,11 +15,11 @@ afterEach(() => {
 test('should return all groups', (done) => {
   moxios.stubRequest(endpoints.groups('0000'), {
     status: 200,
-    response: groupsFixture.plain
+    response: groupsFixture.plain,
   });
 
   groupsController(axios, {
-    userId: '0000'
+    userId: '0000',
   }).then((groups) => {
     expect(groups).toMatchObject(groupsFixture.parsed);
     done();

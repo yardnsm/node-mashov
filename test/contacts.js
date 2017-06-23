@@ -15,11 +15,11 @@ afterEach(() => {
 test('should return all student\'s contacts', (done) => {
   moxios.stubRequest(endpoints.contacts.student('0000'), {
     status: 200,
-    response: contactsFixture.plain
+    response: contactsFixture.plain,
   });
 
   contactsController.student(axios, {
-    userId: '0000'
+    userId: '0000',
   }).then((contacts) => {
     expect(contacts).toMatchObject(contactsFixture.parsed);
     done();
@@ -29,11 +29,11 @@ test('should return all student\'s contacts', (done) => {
 test('should return groups contacts', (done) => {
   moxios.stubRequest(endpoints.contacts.group('0000'), {
     status: 200,
-    response: contactsFixture.plain
+    response: contactsFixture.plain,
   });
 
   contactsController.group(axios, {
-    groupId: '0000'
+    groupId: '0000',
   }).then((contacts) => {
     expect(contacts).toMatchObject(contactsFixture.parsed);
     done();

@@ -14,7 +14,7 @@ afterEach(() => {
 test('should fetch a list of all schools', async () => {
   moxios.stubRequest(endpoints.schools, {
     status: 200,
-    response: schoolsFixture.plain
+    response: schoolsFixture.plain,
   });
 
   const schools = await fetchSchools();

@@ -15,11 +15,11 @@ afterEach(() => {
 test('should return all bagrut grades', (done) => {
   moxios.stubRequest(endpoints.bagrutGrades('0000'), {
     status: 200,
-    response: bagrutGradesFixture.plain
+    response: bagrutGradesFixture.plain,
   });
 
   bagrutGradesController(axios, {
-    userId: '0000'
+    userId: '0000',
   }).then((bagrutGrades) => {
     expect(bagrutGrades).toMatchObject(bagrutGradesFixture.parsed);
     done();

@@ -15,11 +15,11 @@ afterEach(() => {
 test('should return all timetable events', (done) => {
   moxios.stubRequest(endpoints.timetable('0000'), {
     status: 200,
-    response: timetableFixture.plain
+    response: timetableFixture.plain,
   });
 
   timetableController(axios, {
-    userId: '0000'
+    userId: '0000',
   }).then((timetable) => {
     expect(timetable).toMatchObject(timetableFixture.parsed);
     done();

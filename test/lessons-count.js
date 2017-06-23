@@ -15,11 +15,11 @@ afterEach(() => {
 test('should return all lessonsCount events', (done) => {
   moxios.stubRequest(endpoints.lessonsCount('0000'), {
     status: 200,
-    response: lessonsCountFixture.plain
+    response: lessonsCountFixture.plain,
   });
 
   lessonsCountController(axios, {
-    userId: '0000'
+    userId: '0000',
   }).then((lessonsCount) => {
     expect(lessonsCount).toMatchObject(lessonsCountFixture.parsed);
     done();

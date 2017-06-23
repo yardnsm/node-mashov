@@ -15,11 +15,11 @@ afterEach(() => {
 test('should return all behave events', (done) => {
   moxios.stubRequest(endpoints.behave('0000'), {
     status: 200,
-    response: behaveFixture.plain
+    response: behaveFixture.plain,
   });
 
   behaveController(axios, {
-    userId: '0000'
+    userId: '0000',
   }).then((behave) => {
     expect(behave).toMatchObject(behaveFixture.parsed);
     done();

@@ -185,7 +185,7 @@ Will fetch the user's files (aka study meterials)
 #### Client#getGroups()
 #### Client#getContacts()
 
-#### Client#getGroupsContacts()
+#### Client#getGroupContacts()
 
 > **Example usage:**
 > ```javascript

@@ -15,11 +15,11 @@ afterEach(() => {
 test('should return all bells events', (done) => {
   moxios.stubRequest(endpoints.bells, {
     status: 200,
-    response: bellsFixture.plain
+    response: bellsFixture.plain,
   });
 
   bellsController(axios, {
-    userId: '0000'
+    userId: '0000',
   }).then((bells) => {
     expect(bells).toMatchObject(bellsFixture.parsed);
     done();

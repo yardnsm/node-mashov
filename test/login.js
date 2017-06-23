@@ -14,14 +14,14 @@ afterEach(() => {
 
 test('should fail if details are wrong', (done) => {
   moxios.stubRequest(endpoints.login, {
-    status: 401
+    status: 401,
   });
 
   loginController(axios, {
     username: 'username',
     password: 'password',
     school: {},
-    year: 2017
+    year: 2017,
   }).catch(done);
 });
 
@@ -29,13 +29,13 @@ test('should resolve if details are correct', (done) => {
   moxios.stubRequest(endpoints.login, {
     status: 200,
     response: loginFixture.plain,
-    headers: loginFixture.headers
+    headers: loginFixture.headers,
   });
 
   loginController(axios, {
     username: 'username',
     password: 'password',
     school: {},
-    year: 2017
+    year: 2017,
   }).then(done);
 });

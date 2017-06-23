@@ -15,11 +15,11 @@ afterEach(() => {
 test('should return all grades', (done) => {
   moxios.stubRequest(endpoints.grades('0000'), {
     status: 200,
-    response: gradesFixture.plain
+    response: gradesFixture.plain,
   });
 
   gradesController(axios, {
-    userId: '0000'
+    userId: '0000',
   }).then((grades) => {
     expect(grades).toMatchObject(gradesFixture.parsed);
     done();

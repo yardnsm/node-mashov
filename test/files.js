@@ -15,11 +15,11 @@ afterEach(() => {
 test('should return all files', (done) => {
   moxios.stubRequest(endpoints.files.all('0000'), {
     status: 200,
-    response: filesFixture.plain
+    response: filesFixture.plain,
   });
 
   filesController(axios, {
-    userId: '0000'
+    userId: '0000',
   }).then((files) => {
     expect(files).toMatchObject(filesFixture.parsed);
     done();
