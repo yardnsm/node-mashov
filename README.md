@@ -199,7 +199,7 @@ Will fetch the user's school's bell schedule.
 
 #### Client#getFiles()
 
-Will fetch the user's files (aka study meterials)
+Will fetch the user's files (aka study materials)
 
 #### Client#getGroups()
 #### Client#getContacts()
