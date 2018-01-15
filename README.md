@@ -26,20 +26,22 @@ npm install --save node-mashov
 ```javascript
 import { fetchSchools, Client } from 'node-mashov';
 
-const schools = await fetchSchools();
-const school = schools.find(s => s.name.includes('myschool'));
+(async () => {
+  const schools = await fetchSchools();
+  const school = schools.find(s => s.name.includes('myschool'));
 
-const client = new Client();
+  const client = new Client();
 
-client.login({
-  username: 'username',
-  password: 'supersecret',
-  year: school.years[school.years.length - 1],
-  school
-}).then(client.getGrades)
-  .then((grades) => {
-    console.log(grades);
-  });
+  client.login({
+    username: 'username',
+    password: 'supersecret',
+    year: school.years[school.years.length - 1],
+    school
+  }).then(client.getGrades)
+    .then((grades) => {
+      console.log(grades);
+    });
+})();
 ```
 
 ### API
