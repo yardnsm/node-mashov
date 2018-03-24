@@ -25,6 +25,7 @@
   "scripts": {
     "build": "babel ./lib --out-dir ./dist",
     "test": "jest --config .jestrc",
+    "posttest": "npm run lint",
     "lint": "eslint . --ignore-path .gitignore",
     "clean": "rm -rf ./dist",
     "prepublish": "npm test && npm run build"
