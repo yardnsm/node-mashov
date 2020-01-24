@@ -17,6 +17,7 @@
   "files": [
     "dist"
   ],
+  "module": "lib/index.js",
   "main": "dist/index.js",
   "repository": {
     "type": "git",
@@ -24,26 +25,32 @@
   },
   "scripts": {
     "build": "babel ./lib --out-dir ./dist",
-    "test": "jest --config .jestrc",
+    "test": "jest",
     "posttest": "npm run lint",
     "lint": "eslint . --ignore-path .gitignore",
     "clean": "rm -rf ./dist",
     "prepublish": "npm test && npm run build"
   },
   "dependencies": {
-    "axios": "^0.16.1",
-    "encodeurl": "^1.0.1"
+    "axios": "^0.19.2",
+    "encodeurl": "^1.0.2"
   },
   "devDependencies": {
-    "babel-cli": "^6.24.1",
-    "babel-eslint": "^7.2.3",
-    "babel-jest": "^19.0.0",
-    "babel-preset-env": "^1.5.1",
+    "@babel/cli": "^7.8.3",
+    "@babel/core": "^7.8.3",
+    "@babel/plugin-transform-runtime": "^7.8.3",
+    "@babel/preset-env": "^7.8.3",
+    "@babel/register": "^7.8.3",
+    "@babel/runtime": "^7.8.3",
+    "babel-eslint": "^10.0.3",
+    "babel-jest": "^25.1.0",
     "eslint": "^3.19.0",
     "eslint-config-airbnb-base": "^11.1.3",
-    "eslint-plugin-import": "^2.2.0",
-    "jest": "^19.0.2",
-    "moxios": "^0.4.0"
+    "eslint-plugin-import": "^2.20.0",
+    "jest": "^25.1.0",
+    "moxios": "^0.4.0",
+    "webpack": "^4.41.5",
+    "webpack-cli": "^3.3.10"
   },
   "engines": {
     "node": ">=4"
