@@ -24,7 +24,10 @@ npm install --save node-mashov
 Or import it in the browser (from `unpkg`, for example):
 
 ```html
-<script src="https://unpkg.com/node-mashov"></script>
+<!-- Import packages -->
+<script src="https://unpkg.com/axios@0.19.2/dist/axios.min.js"></script>
+<script src="https://unpkg.com/node-mashov/dist/node-mashov.min.js"></script>
+
 <script>
   const { fetchSchools, Client} = window.nodeMashov;
 
