@@ -24,7 +24,8 @@
     "url": "https://github.com/yardnsm/node-mashov"
   },
   "scripts": {
-    "build": "babel ./lib --out-dir ./dist",
+    "prebuild": "npm run clean",
+    "build": "webpack && webpack --env min",
     "test": "jest",
     "posttest": "npm run lint",
     "lint": "eslint . --ignore-path .gitignore",
@@ -32,8 +33,10 @@
     "prepublish": "npm test && npm run build"
   },
   "dependencies": {
-    "axios": "^0.19.2",
     "encodeurl": "^1.0.2"
+  },
+  "peerDependencies": {
+    "axios": "^0.19.2"
   },
   "devDependencies": {
     "@babel/cli": "^7.8.3",
@@ -44,6 +47,7 @@
     "@babel/runtime": "^7.8.3",
     "babel-eslint": "^10.0.3",
     "babel-jest": "^25.1.0",
+    "babel-loader": "^8.0.6",
     "eslint": "^3.19.0",
     "eslint-config-airbnb-base": "^11.1.3",
     "eslint-plugin-import": "^2.20.0",
