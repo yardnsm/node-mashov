@@ -11,7 +11,7 @@ export default env => ({
   output: {
     filename: env === 'min' ? `${pkg.name}.min.js` : `${pkg.name}.js`,
     path: path.resolve(__dirname, 'dist'),
-    library: 'Mashov',
+    library: 'nodeMashov',
     libraryTarget: 'umd',
   },
 

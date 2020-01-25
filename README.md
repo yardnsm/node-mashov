@@ -15,8 +15,21 @@ For a full list of features, consult the [API](#api) section.
 
 ## Install
 
+Install it from npm:
+
 ```console
 npm install --save node-mashov
+```
+
+Or import it in the browser (from `unpkg`, for example):
+
+```html
+<script src="https://unpkg.com/node-mashov"></script>
+<script>
+  const { fetchSchools, Client} = window.nodeMashov;
+
+  // ...
+</script>
 ```
 
 ## Usage
