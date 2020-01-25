@@ -12,30 +12,32 @@ afterEach(() => {
   moxios.uninstall();
 });
 
-test('should fail if details are wrong', (done) => {
+test('should fail if details are wrong', () => {
   moxios.stubRequest(endpoints.login, {
     status: 401,
   });
 
-  loginController(axios, {
+  return loginController(axios, {
     username: 'username',
     password: 'password',
     school: {},
     year: 2017,
-  }).catch(done);
+  }).catch((e) => {
+    expect(e.response.status).toEqual(401);
+  });
 });
 
-test('should resolve if details are correct', (done) => {
+test('should resolve if details are correct', () => {
   moxios.stubRequest(endpoints.login, {
     status: 200,
     response: loginFixture.plain,
     headers: loginFixture.headers,
   });
 
-  loginController(axios, {
+  return loginController(axios, {
     username: 'username',
     password: 'password',
     school: {},
     year: 2017,
-  }).then(done);
+  });
 });

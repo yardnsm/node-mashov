@@ -12,21 +12,20 @@ afterEach(() => {
   moxios.uninstall();
 });
 
-test('get all conversations', (done) => {
+test('get all conversations', () => {
   moxios.stubRequest(endpoints.conversations.inbox('?'), {
     status: 200,
     response: fixture.all_conversations,
   });
 
-  conversationsController.all(axios, {
+  return conversationsController.all(axios, {
     query: 'inbox',
   }).then((convs) => {
     expect(convs).toMatchObject(fixture.all_conversations_parsed);
-    done();
   });
 });
 
-test('generate a query correctly', (done) => {
+test('generate a query correctly', () => {
   const queryExpected =
     'מאת:(sender) אל:(receiver) נושא:(subject) תוכן:(<b>body</b>) יש:(קבצים) מ:(2017-05-01) עד:(2017-05-08)';
 
@@ -35,7 +34,7 @@ test('generate a query correctly', (done) => {
     response: fixture.all_conversations,
   });
 
-  conversationsController.all(axios, {
+  return conversationsController.all(axios, {
     query: {
       sender: 'sender',
       receiver: 'receiver',
@@ -45,19 +44,18 @@ test('generate a query correctly', (done) => {
       fromDate: '2017-05-01',
       toDate: '2017-05-08',
     },
-  }).then(done);
+  });
 });
 
-test('get a single conversation', (done) => {
+test('get a single conversation', () => {
   moxios.stubRequest(endpoints.conversations.single('0000'), {
     status: 200,
     response: fixture.single_conversation,
   });
 
-  conversationsController.single(axios, {
+  return conversationsController.single(axios, {
     conversationId: '0000',
   }).then((conv) => {
     expect(conv).toMatchObject(fixture.single_conversation_parsed);
-    done();
   });
 });
