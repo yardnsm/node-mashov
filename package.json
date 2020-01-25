@@ -18,7 +18,7 @@
     "dist"
   ],
   "module": "lib/index.js",
-  "main": "dist/index.js",
+  "main": "dist/node-mashov.js",
   "repository": {
     "type": "git",
     "url": "https://github.com/yardnsm/node-mashov"

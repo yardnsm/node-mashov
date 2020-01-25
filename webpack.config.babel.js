@@ -27,6 +27,8 @@ export default env => ({
     axios: 'axios',
   },
 
+  devtool: 'source-maps',
+
   plugins: [
     new webpack.BannerPlugin({
       banner: () => `${pkg.name} v${pkg.version} | (c) by ${pkg.author.name || pkg.author}`,
