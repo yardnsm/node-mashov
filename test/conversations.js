@@ -1,7 +1,7 @@
 import axios from 'axios';
 import moxios from 'moxios';
-import { endpoints } from '../lib/api-config';
-import conversationsController from '../lib/controllers/conversations';
+import { endpoints } from '../src/api-config';
+import conversationsController from '../src/controllers/conversations';
 import fixture from './fixtures/conversations.json';
 
 beforeEach(() => {

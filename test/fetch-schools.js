@@ -1,6 +1,6 @@
 import moxios from 'moxios';
-import { endpoints } from '../lib/api-config';
-import fetchSchools from '../lib/fetch-schools';
+import { endpoints } from '../src/api-config';
+import fetchSchools from '../src/fetch-schools';
 import schoolsFixture from './fixtures/schools.json';
 
 beforeEach(() => {

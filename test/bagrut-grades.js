@@ -1,7 +1,7 @@
 import axios from 'axios';
 import moxios from 'moxios';
-import { endpoints } from '../lib/api-config';
-import bagrutGradesController from '../lib/controllers/bagrut-grades';
+import { endpoints } from '../src/api-config';
+import bagrutGradesController from '../src/controllers/bagrut-grades';
 import bagrutGradesFixture from './fixtures/bagrut-grades.json';
 
 beforeEach(() => {
