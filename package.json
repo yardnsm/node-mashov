@@ -32,7 +32,7 @@
     "posttest": "npm run lint",
     "lint": "eslint . --ignore-path .gitignore",
     "clean": "rm -rf ./dist",
-    "prepublish": "npm test && npm run build"
+    "prepare": "npm run build"
   },
   "dependencies": {
     "axios": "^0.19.2",
