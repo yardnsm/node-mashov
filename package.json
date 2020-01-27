@@ -35,10 +35,8 @@
     "prepublish": "npm test && npm run build"
   },
   "dependencies": {
+    "axios": "^0.19.2",
     "encodeurl": "^1.0.2"
-  },
-  "peerDependencies": {
-    "axios": "^0.19.2"
   },
   "devDependencies": {
     "@babel/cli": "^7.8.3",
