@@ -6,7 +6,7 @@
     "isNew": true,
     "hasDrafts": false,
     "hasAttachments": true,
-    "messages": [{  
+    "messages": [{
       "messageId": "1111",
       "conversationId": "0000",
       "senderId": "2222",
@@ -31,14 +31,14 @@
     }]
   }],
 
-  "single_conversation": {  
+  "single_conversation": {
     "conversationId": "0000",
     "subject": "Subject",
     "sendTime": "2017-05-01T19:07:11",
     "isNew": true,
     "hasDrafts": false,
     "hasAttachments": true,
-    "messages":[{  
+    "messages":[{
       "messageId": "1111",
       "conversationId": "0000",
       "senderId": "2222",
@@ -47,7 +47,7 @@
       "body": "<p>Hello!</p>",
       "lastUpdate": "2017-05-01T19:07:10",
       "sendTime": "2017-05-01T19:07:11",
-      "recipients":[{  
+      "recipients":[{
         "comment": null,
         "displayOrder": 4,
         "cssClass": "mshv-contact mshv-contact-teacher",

@@ -23,10 +23,6 @@ export default env => ({
     }],
   },
 
-  externals: {
-    axios: 'axios',
-  },
-
   devtool: 'source-maps',
 
   plugins: [
