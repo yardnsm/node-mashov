@@ -1,7 +1,7 @@
 import axios from 'axios';
 import moxios from 'moxios';
-import { endpoints } from '../lib/api-config';
-import groupsController from '../lib/controllers/groups';
+import { endpoints } from '../src/api-config';
+import groupsController from '../src/controllers/groups';
 import groupsFixture from './fixtures/groups.json';
 
 beforeEach(() => {

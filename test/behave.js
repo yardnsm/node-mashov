@@ -1,7 +1,7 @@
 import axios from 'axios';
 import moxios from 'moxios';
-import { endpoints } from '../lib/api-config';
-import behaveController from '../lib/controllers/behave';
+import { endpoints } from '../src/api-config';
+import behaveController from '../src/controllers/behave';
 import behaveFixture from './fixtures/behave.json';
 
 beforeEach(() => {

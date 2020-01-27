@@ -16,11 +16,11 @@
   },
   "files": [
     "dist",
-    "lib",
-    "lib/index.d.ts"
+    "src",
+    "src/index.d.ts"
   ],
-  "main": "lib/index.js",
-  "types": "lib/index.d.ts",
+  "main": "src/index.js",
+  "types": "src/index.d.ts",
   "repository": {
     "type": "git",
     "url": "https://github.com/yardnsm/node-mashov"

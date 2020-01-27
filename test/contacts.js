@@ -1,7 +1,7 @@
 import axios from 'axios';
 import moxios from 'moxios';
-import { endpoints } from '../lib/api-config';
-import contactsController from '../lib/controllers/contacts';
+import { endpoints } from '../src/api-config';
+import contactsController from '../src/controllers/contacts';
 import contactsFixture from './fixtures/contacts.json';
 
 beforeEach(() => {

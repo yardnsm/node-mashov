@@ -1,7 +1,7 @@
 import axios from 'axios';
 import moxios from 'moxios';
-import { endpoints } from '../lib/api-config';
-import lessonsCountController from '../lib/controllers/lessons-count';
+import { endpoints } from '../src/api-config';
+import lessonsCountController from '../src/controllers/lessons-count';
 import lessonsCountFixture from './fixtures/lessons-count.json';
 
 beforeEach(() => {

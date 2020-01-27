@@ -1,4 +1,4 @@
-import { extractCookie, createCookieHeader, createQueryString } from '../lib/utils';
+import { extractCookie, createCookieHeader, createQueryString } from '../src/utils';
 
 test('extractCookie', () => {
   const header = 'cookie1=val1; domain=.place.holder; path=/; secure; httponly';

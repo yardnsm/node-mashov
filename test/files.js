@@ -1,7 +1,7 @@
 import axios from 'axios';
 import moxios from 'moxios';
-import { endpoints } from '../lib/api-config';
-import filesController from '../lib/controllers/files';
+import { endpoints } from '../src/api-config';
+import filesController from '../src/controllers/files';
 import filesFixture from './fixtures/files.json';
 
 beforeEach(() => {

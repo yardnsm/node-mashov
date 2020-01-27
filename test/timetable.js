@@ -1,7 +1,7 @@
 import axios from 'axios';
 import moxios from 'moxios';
-import { endpoints } from '../lib/api-config';
-import timetableController from '../lib/controllers/timetable';
+import { endpoints } from '../src/api-config';
+import timetableController from '../src/controllers/timetable';
 import timetableFixture from './fixtures/timetable.json';
 
 beforeEach(() => {

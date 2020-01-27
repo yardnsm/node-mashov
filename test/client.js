@@ -1,4 +1,4 @@
-import Client from '../lib/client';
+import Client from '../src/client';
 
 test('should reject if user is not logged', (done) => {
   const client = new Client();

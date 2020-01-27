@@ -1,7 +1,7 @@
 import axios from 'axios';
 import moxios from 'moxios';
-import { endpoints } from '../lib/api-config';
-import bellsController from '../lib/controllers/bells';
+import { endpoints } from '../src/api-config';
+import bellsController from '../src/controllers/bells';
 import bellsFixture from './fixtures/bells.json';
 
 beforeEach(() => {

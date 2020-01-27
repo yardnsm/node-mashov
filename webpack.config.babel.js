@@ -4,7 +4,7 @@ import path from 'path';
 import pkg from './package.json';
 
 export default env => ({
-  entry: './lib/index.js',
+  entry: './src/index.js',
 
   mode: env === 'min' ? 'production' : 'none',
 
