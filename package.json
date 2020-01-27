@@ -15,10 +15,12 @@
     "url": "yardnsm.net"
   },
   "files": [
-    "dist"
+    "dist",
+    "lib",
+    "lib/index.d.ts"
   ],
-  "module": "lib/index.js",
-  "main": "dist/node-mashov.js",
+  "main": "lib/index.js",
+  "types": "lib/index.d.ts",
   "repository": {
     "type": "git",
     "url": "https://github.com/yardnsm/node-mashov"
@@ -26,7 +28,7 @@
   "scripts": {
     "prebuild": "npm run clean",
     "build": "webpack && webpack --env min",
-    "test": "jest",
+    "test": "jest && tsd",
     "posttest": "npm run lint",
     "lint": "eslint . --ignore-path .gitignore",
     "clean": "rm -rf ./dist",
@@ -53,6 +55,7 @@
     "eslint-plugin-import": "^2.20.0",
     "jest": "^25.1.0",
     "moxios": "^0.4.0",
+    "tsd": "^0.11.0",
     "webpack": "^4.41.5",
     "webpack-cli": "^3.3.10"
   },
