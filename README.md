@@ -1,6 +1,6 @@
 # node-mashov
 
-[![Build Status](https://travis-ci.org/yardnsm/node-mashov.svg?branch=master)](https://travis-ci.org/yardnsm/node-mashov)
+[![Build Status](https://github.com/yardnsm/node-mashov/workflows/Test/badge.svg)](https://github.com/yardnsm/node-mashov/actions)
 [![npm](https://img.shields.io/npm/v/node-mashov)](https://www.npmjs.com/package/node-mashov)
 
 > A node.js wrapper for [Mashov](http://www.mashov.info/) API.
