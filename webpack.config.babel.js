@@ -27,7 +27,7 @@ export default env => ({
 
   plugins: [
     new webpack.BannerPlugin({
-      banner: () => `${pkg.name} v${pkg.version} | (c) by ${pkg.author.name || pkg.author}`,
+      banner: `${pkg.name} v${pkg.version} | (c) by ${pkg.author.name || pkg.author}`,
     }),
   ],
 });
