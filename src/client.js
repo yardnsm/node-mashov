@@ -311,7 +311,7 @@ class Client {
   }
 
   /**
-   * Get the user's school's bell schedule.
+   * Get the user's online lessons.
    *
    * @returns {Promise}
    */
