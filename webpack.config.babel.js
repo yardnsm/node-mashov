@@ -34,9 +34,6 @@ export default env => ({
   devtool: 'source-maps',
 
   plugins: [
-    new webpack.DefinePlugin({
-      'process.env.NODE_ENV': JSON.stringify(process.env.NODE_ENV),
-    }),
     new webpack.BannerPlugin({
       banner: `${pkg.name} v${pkg.version} | (c) by ${
         pkg.author.name || pkg.author
