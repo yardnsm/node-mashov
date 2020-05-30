@@ -19,7 +19,7 @@
     "src",
     "src/index.d.ts"
   ],
-  "main": "dist/node-mashov.min.js",
+  "main": "dist/node-mashov.js",
   "module": "dist/node-mashov.min.js",
   "types": "src/index.d.ts",
   "repository": {
