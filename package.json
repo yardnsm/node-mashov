@@ -20,7 +20,7 @@
     "src/index.d.ts"
   ],
   "main": "dist/node-mashov.js",
-  "module": "dist/node-mashov.min.js",
+  "module": "src/index.js",
   "types": "src/index.d.ts",
   "repository": {
     "type": "git",
