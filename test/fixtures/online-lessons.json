@@ -1,0 +1,24 @@
+{
+  "plain": [
+    {
+      "confId": 100000,
+      "confid": 100000,
+      "creationDate": "0000-00-00T00:00:00",
+      "creatorName": "Teacher1",
+      "endDate": "0000-00-00T00:00:00",
+      "isModerator": false,
+      "name": "Subject1",
+      "startDate": "0000-00-00T00:00:00"
+    }
+  ],
+  "parsed": [
+    {
+      "lessonId": 100000,
+      "name": "Subject1",
+      "teacher": "Teacher1",
+      "startTime": "0000-00-00T00:00:00",
+      "endTime": "0000-00-00T00:00:00",
+      "joinLink": "https://web.mashov.info/api/bbb/join/100000"
+    }
+  ]
+}

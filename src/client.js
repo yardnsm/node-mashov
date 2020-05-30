@@ -15,6 +15,7 @@ import timetableController from './controllers/timetable';
 import filesController from './controllers/files';
 import groupsController from './controllers/groups';
 import contactsController from './controllers/contacts';
+import onlineLessonsController from './controllers/online-lessons';
 
 /**
  * Mashov API client
@@ -50,6 +51,7 @@ class Client {
     this.getGroups = this.getGroups.bind(this);
     this.getContacts = this.getContacts.bind(this);
     this.getGroupContacts = this.getGroupContacts.bind(this);
+    this.getOnlineLessons = this.getOnlineLessons.bind(this);
   }
 
   /**
@@ -306,6 +308,16 @@ class Client {
       contactsController.group(this._axiosInstance, {
         groupId,
       }));
+  }
+
+  /**
+   * Get the user's online lessons.
+   *
+   * @returns {Promise}
+   */
+  getOnlineLessons() {
+    return this._continueIfAuthenticated().then(() =>
+      onlineLessonsController(this._axiosInstance));
   }
 }
 

@@ -36,4 +36,9 @@ export const endpoints = {
     student: userId => `${baseUrl}/students/${userId}/alfon`,
     group: groupId => `${baseUrl}/groups/${groupId}/alfon`,
   },
+
+  onlineLessons: {
+    all: `${baseUrl}/bbb`,
+    join: lessonId => `${baseUrl}/bbb/join/${lessonId}`,
+  },
 };

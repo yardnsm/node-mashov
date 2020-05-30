@@ -132,6 +132,15 @@ export interface Contact {
   cellphone: string;
 }
 
+export interface OnlineLesson {
+  lessonId: number;
+  name: string;
+  teacher: string;
+  startTime: string;
+  endTime: string;
+  joinLink: string;
+}
+
 export type SchoolYear = number;
 export type MashovDate = string | null;
 export type MashovGroupId = string;
@@ -160,6 +169,7 @@ export type GetFilesResponse = Promise<File[]>;
 export type GetGroupsResponse = Promise<Group[]>;
 export type GetContactsResponse = Promise<Contact[]>;
 export type GetGroupContactsResponse = Promise<Contact[]>;
+export type GetOnlineLessonsResponse = Promise<OnlineLesson[]>;
 
 declare function fetchSchools(): FetchSchoolsResponse;
 
@@ -185,4 +195,5 @@ export class Client {
   getGroups(): GetGroupsResponse;
   getContacts(): GetContactsResponse;
   getGroupContacts(groupId: MashovGroupId): GetGroupContactsResponse;
+  getOnlineLessons(): GetOnlineLessonsResponse;
 }

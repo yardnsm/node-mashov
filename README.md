@@ -206,6 +206,7 @@ Fetch a single conversation.
 #### Client#getBagrutGrades()
 #### Client#getBehaveEvents()
 #### Client#getLessonsCount()
+#### Client#getOnlineLessons()
 
 #### Client#getBells()
 

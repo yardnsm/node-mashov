@@ -22,6 +22,7 @@ import {
   GetGroupsResponse,
   GetContactsResponse,
   GetGroupContactsResponse,
+  GetOnlineLessonsResponse,
 } from '.';
 
 // Test fetchSchools
@@ -93,3 +94,4 @@ expectType<GetFilesResponse>(client.getFiles());
 expectType<GetGroupsResponse>(client.getGroups());
 expectType<GetContactsResponse>(client.getContacts());
 expectType<GetGroupContactsResponse>(client.getGroupContacts('0000'));
+expectType<GetOnlineLessonsResponse>(client.getOnlineLessons());
