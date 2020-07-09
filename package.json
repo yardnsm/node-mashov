@@ -19,7 +19,8 @@
     "src",
     "src/index.d.ts"
   ],
-  "main": "src/index.js",
+  "main": "dist/node-mashov.js",
+  "module": "src/index.js",
   "types": "src/index.d.ts",
   "repository": {
     "type": "git",
