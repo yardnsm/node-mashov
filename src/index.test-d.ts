@@ -35,7 +35,7 @@ expectType<AuthDetails>(client.getAuthDetails());
 expectType<void>(client.setAuthDetails({
   csrfToken: '0000',
   uniquId: '0000',
-  mashovSessionId: '0000',
+  mashovAuthToken: '0000',
   correlationId: '0000',
   sessionId: '0000',
   userId: '0000',
