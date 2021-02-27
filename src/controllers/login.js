@@ -18,7 +18,7 @@ const loginController = (axios, payload) => {
     return {
       csrfToken: response.headers['x-csrf-token'] || '',
       uniqueId: cookies.find(e => e[0] === 'uniquId')[1],
-      mashovSessionId: cookies.find(e => e[0] === 'MashovSessionID')[1],
+      mashovAuthToken: cookies.find(e => e[0] === 'MashovAuthToken')[1],
       correlationId: response.data.credential.correlationId,
       sessionId: response.data.credential.correlationId,
       userId: response.data.credential.userId,

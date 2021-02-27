@@ -64,7 +64,7 @@ class Client {
         'X-Csrf-Token': this._authDetails.csrfToken,
         Cookie: createCookieHeader([
           { name: 'uniquId', value: this._authDetails.uniqueId },
-          { name: 'MashovSessionID', value: this._authDetails.mashovSessionId },
+          { name: 'MashovAuthToken', value: this._authDetails.mashovAuthToken },
           { name: 'Csrf-Token', value: this._authDetails.csrfToken },
         ]),
       },

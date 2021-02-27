@@ -20,7 +20,7 @@
   "headers": {
     "x-csrf-token": "0000",
     "set-cookie": [
-      "MashovSessionID=0000; secure",
+      "MashovAuthToken=0000; secure",
       "uniquId=0000; secure",
       "Csrf-Token=0000; secure"
     ]

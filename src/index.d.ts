@@ -9,7 +9,7 @@ export interface School {
 export interface AuthDetails {
   csrfToken: string;
   uniquId: string;
-  mashovSessionId: string;
+  mashovAuthToken: string;
   correlationId: string;
   sessionId: string;
   userId: string;
